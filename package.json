@@ -1,0 +1,16 @@
+{
+  "name": "clawdbot-container-ui",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node scripts/start.js",
+    "install:all": "npm install && npm --prefix frontend install && npm --prefix api install",
+    "dev": "concurrently \"npm --prefix frontend run dev\" \"npm --prefix api run dev\"",
+    "build": "npm --prefix frontend run build && npm --prefix api run build",
+    "lint": "npm --prefix frontend run lint && npm --prefix api run lint"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.1",
+    "cross-env": "^7.0.3"
+  }
+}
